@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jiguem</title>
+        <link rel="stylesheet" href="/css/index.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navigation">
+                <ion-icon name="close-outline"></ion-icon>
+                <h3>약속 장소</h3>
+                <span></span>
+            </nav>
+            <section class="search-container">
+                <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                <input
+                    type="text"
+                    name="place"
+                    id="place"
+                    class="input-text input-search"
+                    placeholder="약속 장소를 검색해주세요"
+                />
+                <ion-icon
+                    name="close-circle-outline"
+                    class="search-cancel-icon"
+                ></ion-icon>
+            </section>
+        </header>
+        <main>
+            <div id="map" class="map"></div>
+            <div class="current-location">
+                <ion-icon name="locate-outline"></ion-icon>
+            </div>
+            <section class="query-container display-none">
+                <ul class="query-list">
+                    <li class="query-item">
+                        <span>사당역</span
+                        ><ion-icon name="resize-outline"></ion-icon>
+                    </li>
+                    <li class="query-item">
+                        <span>사당종합체육관</span
+                        ><ion-icon name="resize-outline"></ion-icon>
+                    </li>
+                    <li class="query-item">
+                        <span>사당역맛집</span
+                        ><ion-icon name="resize-outline"></ion-icon>
+                    </li>
+                    <li class="query-item">
+                        <span>사당연세의원</span
+                        ><ion-icon name="resize-outline"></ion-icon>
+                    </li>
+                    <li class="query-item">
+                        <span>사당</span
+                        ><ion-icon name="resize-outline"></ion-icon>
+                    </li>
+                </ul>
+            </section>
+            <section class="search-result-container display-none">
+                <input type="checkbox" name="arrow-down" id="arrow-down" />
+                <div class="result-wrapper">
+                    <h3 class="title">검색 결과 <span>3</span></h3>
+                    <label class="arrow-down" for="arrow-down">
+                        <div class="arrow-mark"></div>
+                    </label>
+                </div>
+                <div class="result-list-wrapper">
+                    <ul class="result-list">
+                        <li class="result-item">
+                            <div class="region-info">
+                                <h4>투썸플레이스 사당점</h4>
+                                <p>서울 관악구 남부순환로 2082-33 (함헌동 1060)</p>
+                            </div>
+                            <ion-icon name="location-outline"></ion-icon>
+                        </li>
+                        <li class="result-item">
+                            <div class="region-info">
+                                <h4>투썸플레이스 사당점</h4>
+                                <p>서울 관악구 남부순환로 2082-33 (함헌동 1060)</p>
+                            </div>
+                            <ion-icon name="location-outline"></ion-icon>
+                        </li>
+                        <li class="result-item">
+                            <div class="region-info">
+                                <h4>투썸플레이스 사당점</h4>
+                                <p>서울 관악구 남부순환로 2082-33 (함헌동 1060)</p>
+                            </div>
+                            <ion-icon name="location-outline"></ion-icon>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        
+        <footer></footer>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+        <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=7j9zwfxqe4"></script>
+        <script src="/js/place-search.js"></script>
+    </body>
+</html>

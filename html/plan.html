@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jiguem</title>
+        <link rel="stylesheet" href="/css/index.css" />
+        <script defer src="/js/place.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navigation">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                <h3>약속 만들기</h3>
+                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </nav>
+        </header>
+        <main>
+            <form class="container-plan">
+                <div class="container-raw">
+                    <label class="title">
+                        <input
+                            class="input-text"
+                            type="text"
+                            name="title"
+                            id="title"
+                            placeholder="약속 제목을 입력해주세요."
+                            autocomplete="false"
+                        />
+                    </label>
+                </div>
+                <!-- <div class="container-raw">
+                    <div class="room-url">
+                        <ion-icon name="infinite-outline"></ion-icon>
+                        <span>https://jiguem.herokuapp.com/room/</span>
+                        <ion-icon name="share-social-outline"></ion-icon>
+                    </div>
+                </div> -->
+                <div class="container-raw">
+                    <div class="setting-private">
+                        <ion-icon name="lock-open-outline"></ion-icon>
+                        <span>비밀 약속 Off</span>
+                        <label class="toggle">
+                            <input
+                                type="checkbox"
+                                name="isPrivate"
+                                id="isPrivate"
+                            />
+                            <div class="toggle-fill"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="container-raw">
+                    <div class="setting-password display-none">
+                        <input type="password" name="password" id="password" class="input-text password" placeholder="비밀번호를 입력해주세요.">
+                    </div>
+                </div>
+                <div class="container-raw">
+                    <div class="setting-place">
+                        <ion-icon name="location-outline"></ion-icon>
+                        <input
+                            type="text"
+                            name="place"
+                            id="place"
+                            class="input-text"
+                            placeholder="약속 장소를 설정해주세요."
+                        />
+                    </div>
+                </div>
+                <div class="container-raw">
+                    <div class="setting-people">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <input
+                            class="input-text"
+                            type="text"
+                            name="people"
+                            id="people"
+                            value="2명"
+                            readonly="true"
+                        />
+                        <label class="select-box">
+                            <input
+                                type="checkbox"
+                                name="select-check"
+                                id="select-check"
+                            />
+                            <span class="arrow-mark"></span>
+                        </label>
+                        <ul class="options display-none">
+                            <li class="option-item">2명</li>
+                            <li class="option-item">3명</li>
+                            <li class="option-item">4명</li>
+                            <li class="option-item">5명</li>
+                            <li class="option-item">6명</li>
+                            <li class="option-item">7명</li>
+                            <li class="option-item">8명</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-raw">
+                    <div class="setting-date">
+                        <ion-icon name="calendar-clear-outline"></ion-icon>
+                        <!-- <input
+                            class="input-text"
+                            type="text"
+                            name="date"
+                            id="date"
+                            placeholder="약속 일시를 설정해주세요."
+                        /> -->
+                        <input
+                            class="input-text"
+                            type="datetime-local"
+                            name="calendar"
+                            id="calendar"
+                        />
+                    </div>
+                </div>
+                <div class="container-raw">
+                    <div class="setting-alarm-before">
+                        <ion-icon name="time-outline"></ion-icon>
+                        <span>약속 전</span>
+                        <div class="time-container">
+                            <input
+                                class="display-none"
+                                type="radio"
+                                name="time-before"
+                                id="oneHour-before"
+                                value="60"
+                            />
+                            <label for="oneHour-before">
+                                <span>1시간</span>
+                            </label>
+                            <input
+                                class="display-none"
+                                type="radio"
+                                name="time-before"
+                                id="thirty-minute-before"
+                                value="30"
+                            />
+                            <label for="thirty-minute-before">
+                                <span>30분</span>
+                            </label>
+                            <input
+                                class="display-none"
+                                type="radio"
+                                name="time-before"
+                                id="fifteen-minute-before"
+                                value="15"
+                                checked
+                            />
+                            <label for="fifteen-minute-before">
+                                <span>15분</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="time-before-detail-container">
+                        <span class="selected-time">오전 11:45</span>
+                        <span class="from">부터</span>
+                    </div>
+                </div>
+                <div class="container-raw">
+                    <div class="setting-alarm-after">
+                        <ion-icon name="time-outline"></ion-icon>
+                        <span>약속 후</span>
+                        <div class="time-container">
+                            <input
+                                class="display-none"
+                                type="radio"
+                                name="time-after"
+                                id="fifteen-minute-after"
+                                value="15"
+                                checked
+                            />
+                            <label for="fifteen-minute-after">
+                                <span>15분</span>
+                            </label>
+                            <input
+                                class="display-none"
+                                type="radio"
+                                name="time-after"
+                                id="thirty-minute-after"
+                                value="30"
+                            />
+                            <label for="thirty-minute-after">
+                                <span>30분</span>
+                            </label>
+                            <input
+                                class="display-none"
+                                type="radio"
+                                name="time-after"
+                                id="oneHour-after"
+                                value="60"
+                            />
+                            <label for="oneHour-after">
+                                <span>1시간</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="time-after-detail-container">
+                        <span class="selected-time">오후 12:15</span>
+                        <span class="to">까지</span>
+                    </div>
+                </div>
+            </form>
+            <!-- <button type="button" class="button-container">
+                <ion-icon name="checkmark-outline"></ion-icon><span>완료</span>
+            </button> -->
+            <button type="button" class="button-container">
+                <ion-icon name="log-in-outline"></ion-icon><span>참여하기</span>
+            </button>
+            <div class="overlay display-none">
+                <div class="popup">
+                    <div class="content">
+                        <span class="popup-title">닉네임을 입력해주세요.</span>
+                        <input
+                            type="text"
+                            class="input-text"
+                            name="username"
+                            id="username"
+                        />
+                    </div>
+                    <div class="btn-group">
+                        <button class="cancel">취소</button>
+                        <button class="enter">입장</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+    </body>
+</html>
