@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,7 +25,7 @@
                 />
                 <ion-icon
                     name="close-circle-outline"
-                    class="search-cancel-icon"
+                    class="search-cancel-icon display-none"
                 ></ion-icon>
             </section>
         </header>
@@ -58,13 +58,13 @@
                     </li>
                 </ul>
             </section>
-            <section class="search-result-container display-none">
-                <input type="checkbox" name="arrow-down" id="arrow-down" />
+            <section class="search-result-container display-none" id="search-result">
+                <input type="checkbox" class="arrow-checkbox" name="arrow-down" id="arrow-down" />
                 <div class="result-wrapper">
-                    <h3 class="title">검색 결과 <span>3</span></h3>
                     <label class="arrow-down" for="arrow-down">
                         <div class="arrow-mark"></div>
                     </label>
+                    <h3 class="title">검색 결과 <span>3</span></h3>
                 </div>
                 <div class="result-list-wrapper">
                     <ul class="result-list">

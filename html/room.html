@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JIGUEM</title>
+        <link rel="stylesheet" href="/css/index.css" />
+    </head>
+    <body>
+        <header class="room-header">
+            <nav class="room-navigation">
+                <ion-icon name="log-out-outline" class="btn-back"></ion-icon>
+                <div class="timer-wrapper danger">
+                    <span class="timer">06:20</span>
+                </div>
+                <ion-icon
+                    name="information-circle-outline"
+                    class="btn-info"
+                ></ion-icon>
+            </nav>
+        </header>
+        <main>
+            <div id="map" class="room-map"></div>
+            <section class="member-container">
+                <input type="checkbox" name="arrow-down" id="arrow-down">
+                <div class="top-wrapper">
+                    <label class="arrow-up" for="arrow-down">
+                        <div class="arrow-mark"></div>
+                    </label>
+                    <h3 class="top-title">약속 참여자 <span>4</span></h3>
+                    <ion-icon name="chatbox-outline" class="chatbox-outline"></ion-icon>
+                </div>
+                <div class="member-list-container display-none">
+                    <div class="member-item">
+                        <div class="profile-image">
+                            <ion-icon name="person-outline" class="profile-image-icon" color="light"></ion-icon>
+                        </div>
+                        <div class="member-name"><span>최두원</span></div>
+                        <div class="member-location-info"><span>5km</span></div>
+                        <div class="member-status sticker-too-late"><span>지각 확정</span></div>
+                    </div>
+                    <div class="member-item">
+                        <div class="profile-image">
+                            <ion-icon name="person-outline" class="profile-image-icon" color="light"></ion-icon>
+                        </div>
+                        <div class="member-name"><span>이신호</span></div>
+                        <div class="member-location-info"><span>10m</span></div>
+                        <div class="member-status sticker-arrive"><span>도착</span></div>
+                    </div>
+                    <div class="member-item">
+                        <div class="profile-image">
+                            <ion-icon name="person-outline" class="profile-image-icon" color="light"></ion-icon>
+                        </div>
+                        <div class="member-name"><span>김지황</span></div>
+                        <div class="member-location-info"><span>5m</span></div>
+                        <div class="member-status sticker-arrive"><span>도착</span></div>
+                    </div>
+                    <div class="member-item">
+                        <div class="profile-image">
+                            <ion-icon name="person-outline" class="profile-image-icon" color="light"></ion-icon>
+                        </div>
+                        <div class="member-name"><span>김수현</span></div>
+                        <div class="member-location-info"><span>300m</span></div>
+                        <div class="member-status sticker-late"><span>지각 예정</span></div>
+                    </div>
+                </div>
+            </section>
+            <div class="overlay transparent">
+                <div class="popup nickname">
+                    <div class="content">
+                        <span class="popup-title">닉네임을 입력해주세요.</span>
+                        <input
+                            type="text"
+                            class="input-text"
+                            name="username"
+                            id="username"
+                        />
+                    </div>
+                    <div class="btn-group">
+                        <button class="cancel">취소</button>
+                        <button class="enter">확인</button>
+                    </div>
+                </div>
+                <div class="popup exit display-none">
+                    <div class="content">
+                        <span class="popup-title">약속을 나가시겠습니까?</span>
+                    </div>
+                    <div class="btn-group">
+                        <button class="cancel">취소</button>
+                        <button class="enter">확인</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=7j9zwfxqe4"
+        ></script>
+        <script src="/js/room.js"></script>
+    </body>
+</html>

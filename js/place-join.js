@@ -18,9 +18,9 @@ const alarmBefore = document.querySelector('.setting-alarm-before');
 const alarmAfter = document.querySelector('.setting-alarm-after');
 const alarmTimeFrom = document.querySelector('.time-before-detail-container');
 const alarmTimeTo = document.querySelector('.time-after-detail-container');
-const submitButton = document.querySelector('.button-container-submit');
-// const editButton = document.querySelector('.button-container-edit');
-// const joinButton = document.querySelector('.button-container-join');
+// const submitButton = document.querySelector('.button-container-submit');
+//const editButton = document.querySelector('.button-container-edit');
+const joinButton = document.querySelector('.button-container-join');
 const overlay = document.querySelector('.overlay');
 
 // flag
@@ -55,12 +55,12 @@ private.addEventListener('click', (event) => {
 people.addEventListener('click', (event) => {
     const element = event.target;
     const selectBox = people.querySelector('#select-check');
-    console.log(element);
+
     if (element.classList.contains('select-box')) {
         peopleOptions.classList.toggle('display-none');
     } else if(element.classList.contains('arrow-mark')){
         peopleOptions.classList.toggle('display-none');
-    }else if (element.classList.contains('input-text')) {
+    } else if (element.classList.contains('input-text')) {
         peopleOptions.classList.toggle('display-none');
         selectBox.checked = selectBox.checked ? false : true;
     } else {
@@ -170,32 +170,32 @@ alarmAfter.addEventListener('click', (event) => {
     }
 });
 
-submitButton.addEventListener('click', (event) => {
-    const isPrivate = private.querySelector('#isPrivate').value;
-    const passwordValue = password.querySelector('#password').value;
-    if (isPrivate === 'on') {
-        if (!passwordValue) {
-            alert('패스워드를 입력해주세요.');
-            return;
-        }
-    }
-    overlay.classList.toggle('display-none');
-});
+// submitButton.addEventListener('click', (event) => {
+//     const isPrivate = private.querySelector('#isPrivate').value;
+//     const passwordValue = password.querySelector('#password').value;
+//     if (isPrivate === 'on') {
+//         if (!passwordValue) {
+//             alert('패스워드를 입력해주세요.');
+//             return;
+//         }
+//     }
+//     overlay.classList.toggle('display-none');
+// });
 
 // editButton.addEventListener('click', (event) => {
 //     overlay.classList.toggle('display-none');
 //     overlay.querySelector('.confirm').classList.remove('display-none');
 // });
 
-// joinButton.addEventListener('click', (event) => {
-//     const isPrivate = private.querySelector('#isPrivate').value;
+joinButton.addEventListener('click', (event) => {
+    const isPrivate = private.querySelector('#isPrivate').value;
 
-//     if (isPrivate === 'on') {
-//         overlay.querySelector('.password').classList.remove('display-none');
-//     }
-//     overlay.classList.toggle('display-none');
+    if (isPrivate === 'on') {
+        overlay.querySelector('.password').classList.remove('display-none');
+    }
+    overlay.classList.toggle('display-none');
     
-// });
+});
 
 overlay.addEventListener('click', (event) => {
     const element = event.target;
