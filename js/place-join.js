@@ -27,30 +27,30 @@ const overlay = document.querySelector('.overlay');
 let isToggleOn = false;
 
 // events
-private.addEventListener('click', (event) => {
-    const element = event.target;
+// private.addEventListener('click', (event) => {
+//     const element = event.target;
 
-    if (element.classList.contains('toggle-fill')) {
-        const isPrivate = private.querySelector('#isPrivate');
-        const label = private.querySelector('span');
+//     if (element.classList.contains('toggle-fill')) {
+//         const isPrivate = private.querySelector('#isPrivate');
+//         const label = private.querySelector('span');
 
-        if (!isToggleOn) {
-            isPrivate.value = 'on';
-            label.textContent = '비밀 약속 On';
-            isToggleOn = !isToggleOn;
-        } else {
-            isPrivate.value = 'off';
-            label.textContent = '비밀 약속 Off';
-            isToggleOn = !isToggleOn;
-        }
+//         if (!isToggleOn) {
+//             isPrivate.value = 'on';
+//             label.textContent = '비밀 약속 On';
+//             isToggleOn = !isToggleOn;
+//         } else {
+//             isPrivate.value = 'off';
+//             label.textContent = '비밀 약속 Off';
+//             isToggleOn = !isToggleOn;
+//         }
 
-        // toggle password input
-        password.classList.toggle('display-none');
+//         // toggle password input
+//         password.classList.toggle('display-none');
         
-    } else {
-        return;
-    }
-});
+//     } else {
+//         return;
+//     }
+// });
 
 people.addEventListener('click', (event) => {
     const element = event.target;

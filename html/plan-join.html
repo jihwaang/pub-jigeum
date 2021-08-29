@@ -12,23 +12,16 @@
         <header>
             <nav class="navigation">
                 <ion-icon name="arrow-back-outline"></ion-icon>
-                <h3>약속 정보 설정</h3>
+                <h3>약속 참여하기</h3>
                 <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
             </nav>
         </header>
         <main>
             <form class="container-plan">
                 <div class="container-raw">
-                    <label class="title">
-                        <input
-                            class="input-text"
-                            type="text"
-                            name="title"
-                            id="title"
-                            placeholder="약속 제목을 입력해주세요."
-                            autocomplete="false"
-                        />
-                    </label>
+                    <div class="generated-plan">
+                        <h4>프로젝트 지금 Kick-off</h4>
+                    </div>
                 </div>
                 <div class="container-raw">
                     <div class="room-url">
@@ -47,40 +40,29 @@
                                 name="isPrivate"
                                 id="isPrivate"
                                 value="off"
+                                disabled
                             />
                             <div class="toggle-fill"></div>
                         </label>
                     </div>
                 </div>
-                <div class="container-raw">
+                <!-- <div class="container-raw">
                     <div class="setting-password display-none">
                         <input type="password" name="password" id="password" class="input-text password" placeholder="비밀번호를 입력해주세요.">
                     </div>
-                </div>
+                </div> -->
                 <div class="container-raw">
                     <div class="setting-place">
                         <ion-icon name="location-outline"></ion-icon>
-                        <input
-                            type="text"
-                            name="place"
-                            id="place"
-                            class="input-text"
-                            placeholder="약속 장소를 설정해주세요."
-                        />
+                        <p class="place">사당역 투썸플레이스</p>
+                        <ion-icon name="eye-outline" class="view-location"></ion-icon>
                     </div>
                 </div>
                 <div class="container-raw">
                     <div class="setting-people">
                         <ion-icon name="people-outline"></ion-icon>
-                        <input
-                            class="input-text"
-                            type="text"
-                            name="people"
-                            id="people"
-                            value="2명"
-                            readonly="true"
-                        />
-                        <label class="select-box arrow-down">
+                        <span class="people">2명</span>
+                        <label class="select-box arrow-down visibility-hidden">
                             <input
                                 type="checkbox"
                                 name="select-check"
@@ -108,9 +90,10 @@
                             name="date"
                             id="date"
                             placeholder="약속 일시를 설정해주세요."
-                        /> -->
+                            /> -->
+                        <span class="placeAt">2021년 8월 15일 (일) 오후 12:00</span>
                         <input
-                            class="input-text"
+                            class="input-text display-none"
                             type="datetime-local"
                             name="calendar"
                             id="calendar"
@@ -121,7 +104,7 @@
                     <div class="setting-alarm-before">
                         <ion-icon name="time-outline"></ion-icon>
                         <span>약속 전</span>
-                        <div class="time-container">
+                        <div class="time-container visibility-hidden">
                             <input
                                 class="display-none"
                                 type="radio"
@@ -164,7 +147,7 @@
                     <div class="setting-alarm-after">
                         <ion-icon name="time-outline"></ion-icon>
                         <span>약속 후</span>
-                        <div class="time-container">
+                        <div class="time-container visibility-hidden">
                             <input
                                 class="display-none"
                                 type="radio"

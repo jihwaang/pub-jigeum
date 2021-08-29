@@ -449,6 +449,10 @@ input[type="text"].input-text:focus-within, .input-text:focus-within {
     margin: 0;
 }
 
+.container-raw .generated-title {
+    padding-left: 3em;
+}
+
 .container-raw .room-url > span {
     display: inline-block;
     width: 227px;
@@ -463,9 +467,18 @@ input[type="text"].input-text:focus-within, .input-text:focus-within {
 
 }
 
-.container-raw setting-place {
+.container-raw .setting-place {
     
 }
+
+.container-raw .setting-place .place {
+    margin-right: auto;
+    padding-left: 2em;
+}
+.container-raw .setting-place .view-location {
+    cursor: pointer;
+}
+
 .container-raw .setting-people {
     position: relative;
 }
@@ -791,6 +804,9 @@ header .search-container > .search-cancel-icon {
 /* util[s] */
 .display-none {
     display: none !important;
+}
+.visibility-hidden {
+    visibility: hidden !important;
 }
 /* util[e] */
 
